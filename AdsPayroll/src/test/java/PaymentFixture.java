@@ -7,15 +7,15 @@ public class PaymentFixture {
 	private Payroll thePayroll;
 	private Employee currentEmployee;
 	
-	public void id(String aString){
+	public void setId(String aString){
 		id = aString;
 	}
 	
-	public void name(String aString){
+	public void setName(String aString){
 		name = aString;
 	}
 	
-	public void payRate(String aString){
+	public void setPsayRate(String aString){
 		payRate = aString;
 	}
 	
