@@ -15,7 +15,7 @@ public class PaymentFixture {
 		name = aString;
 	}
 	
-	public void setPsayRate(String aString){
+	public void setPayRate(String aString){
 		payRate = aString;
 	}
 	
