@@ -4,7 +4,7 @@ public class PaymentFixture {
 	private String id;
 	private String name;
 	private String payRate;
-	private Payroll thePayroll = new Payroll();
+	private static Payroll thePayroll = new Payroll();
 	private Employee currentEmployee;
 	
 	public void setId(String aString){
