@@ -25,7 +25,11 @@ public class Payroll {
 	}
 
 	private void calculateNet(Payment payment, Employee employee) {
-		// TODO Auto-generated method stub
+		Dollars federalTax = payment.getGrossAmount().times(.25);
+		payment.setFederalTax(federalTax);
+		
+		Dollars net = payment.getGrossAmount().minus(federalTax);
+		payment.setNet(net);
 		
 	}
 
