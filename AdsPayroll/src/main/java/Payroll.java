@@ -1,17 +1,37 @@
+import java.util.Iterator;
 
 public class Payroll {
+	
+	private Employees employees = new Employees();
 
 	public Employee getEmployeeById(String id) {
-		Dollars rate = Dollars.parse("0.00");
-		return new Employee("0","Missing Employee", rate);
+		return employees.getById(id);
 	}
 
 	public void addEmployee(Employee anEmployee) {
+		employees.add(anEmployee);
+	}
+
+	public int pay() {
+		return employees.pay(this);
+	}
+
+	public void payEmployee(Employee employee) {
+		Payment payment = new Payment("20180731", employee.getName(), employee.getId());
+		calculateGross(payment, employee);
+		calculateNet(payment, employee);
+		employee.addPayment(payment);
 		
 	}
 
-	public static int pay() {
-		return 0;
+	private void calculateNet(Payment payment, Employee employee) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void calculateGross(Payment payment, Employee employee) {
+		payment.setGross(Dollars.parse("1000.00"));
+		
 	}
 
 }

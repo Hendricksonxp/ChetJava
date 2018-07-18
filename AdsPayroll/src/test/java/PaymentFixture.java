@@ -31,7 +31,7 @@ public class PaymentFixture {
 	}
 	
 	public int pay(){
-		return Payroll.pay();
+		return thePayroll.pay();
 	}
 	
 	public String grossPay(){
