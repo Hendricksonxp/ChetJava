@@ -30,7 +30,7 @@ public class Payroll {
 	}
 
 	private void calculateGross(Payment payment, Employee employee) {
-		payment.setGross(Dollars.parse("1000.00"));
+		payment.setGross(employee.getPayRate());
 		
 	}
 

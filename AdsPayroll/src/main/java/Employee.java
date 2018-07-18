@@ -4,13 +4,13 @@ public class Employee {
 
 	private String id;
 	private String name;
-	private Dollars thisPayRate;
+	private Dollars payRate;
 	private ArrayList payments;
 
 	public Employee(String id, String name, Dollars payRate) {
 		this.id = id;
 		this.name = name;
-		thisPayRate = payRate;
+		this.payRate = payRate;
 		payments = new ArrayList<Payment>();
 	}
 
@@ -29,6 +29,10 @@ public class Employee {
 
 	public void addPayment(Payment payment) {
 		payments.add(payment);
+	}
+
+	public Dollars getPayRate() {
+		return payRate;
 	}
 
 	
