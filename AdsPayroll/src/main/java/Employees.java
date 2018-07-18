@@ -25,7 +25,7 @@ public class Employees {
 		for (Iterator iterator = collection.iterator(); iterator.hasNext();) {
 			Employee employee = (Employee) iterator.next();
 
-			if (employee.getId() == id){
+			if (employee.getId().equals(id)){
 				return employee;
 			}
 		}
