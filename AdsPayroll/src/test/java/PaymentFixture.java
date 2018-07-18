@@ -6,9 +6,14 @@ public class PaymentFixture {
 	private String payRate;
 	private static Payroll thePayroll = new Payroll();
 	private Employee currentEmployee;
+	private String payDate;
 	
 	public void setId(String aString){
 		id = aString;
+	}
+	
+	public void setPayDate(String aString){
+		payDate = aString;
 	}
 	
 	public void setName(String aString){
@@ -31,7 +36,7 @@ public class PaymentFixture {
 	}
 	
 	public int pay(){
-		return thePayroll.pay();
+		return thePayroll.pay(payDate);
 	}
 	
 	public String grossPay(){

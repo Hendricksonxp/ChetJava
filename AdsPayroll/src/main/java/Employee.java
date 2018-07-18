@@ -5,7 +5,7 @@ public class Employee {
 	private String id;
 	private String name;
 	private Dollars payRate;
-	private ArrayList payments;
+	private ArrayList<Payment> payments;
 
 	public Employee(String id, String name, Dollars payRate) {
 		this.id = id;

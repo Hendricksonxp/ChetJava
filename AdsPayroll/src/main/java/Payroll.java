@@ -12,12 +12,12 @@ public class Payroll {
 		employees.add(anEmployee);
 	}
 
-	public int pay() {
-		return employees.pay(this);
+	public int pay(String payDate) {
+		return employees.pay(this, payDate);
 	}
 
-	public void payEmployee(Employee employee) {
-		Payment payment = new Payment("20180731", employee.getName(), employee.getId());
+	public void payEmployee(Employee employee, String payDate) {
+		Payment payment = new Payment(payDate, employee.getName(), employee.getId());
 		calculateGross(payment, employee);
 		calculateNet(payment, employee);
 		employee.addPayment(payment);

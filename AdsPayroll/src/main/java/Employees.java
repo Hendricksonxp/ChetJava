@@ -9,11 +9,11 @@ public class Employees {
 		collection.add(anEmployee);
 	}
 
-	public int pay(Payroll payroll) {
+	public int pay(Payroll payroll, String payDate) {
 		int count = 0;
 		for (Iterator iterator = collection.iterator(); iterator.hasNext();) {
 			Employee employee = (Employee) iterator.next();
-			payroll.payEmployee(employee);
+			payroll.payEmployee(employee, payDate);
 			count  ++;		
 		}
 		return count;
