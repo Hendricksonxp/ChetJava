@@ -37,5 +37,12 @@ public class PaymentFixture {
 	public String grossPay(){
 		return currentEmployee.getGrossPay();
 	}
-
+	
+	public String federalTax() {
+		return currentEmployee.getFederalTax();
+	}
+	
+	public String netPay() {
+		return currentEmployee.getNetPay();
+	}
 }

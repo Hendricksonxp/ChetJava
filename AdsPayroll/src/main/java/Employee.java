@@ -35,6 +35,16 @@ public class Employee {
 		return payRate;
 	}
 
+	public String getFederalTax() {
+		Payment currentPayment = (Payment) payments.get(payments.size() - 1);
+		return currentPayment.getFederalTax();
+	}
+
+	public String getNetPay() {
+		Payment currentPayment = (Payment) payments.get(payments.size() - 1);
+		return currentPayment.getNetPay();
+	}
+
 	
 
 }
