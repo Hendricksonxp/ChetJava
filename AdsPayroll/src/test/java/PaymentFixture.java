@@ -50,4 +50,12 @@ public class PaymentFixture {
 	public String netPay() {
 		return currentEmployee.getNetPay();
 	}
+	
+	public String qtdGrossPay(){
+		return "0.00";
+	}
+	
+	public String ytdGrossPay(){
+		return "0.00";
+	}
 }
