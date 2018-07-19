@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Employee {
 
@@ -43,6 +44,37 @@ public class Employee {
 	public String getNetPay() {
 		Payment currentPayment = (Payment) payments.get(payments.size() - 1);
 		return currentPayment.getNetPay();
+	}
+
+	public String getQtdGrossPay() {
+		ArrayList qtdPayments = paymentsForQuarter();
+		Dollars result = Dollars.parse("0.00");
+		
+		for (Iterator iterator = qtdPayments.iterator(); iterator.hasNext();) {
+			Payment each = (Payment) iterator.next();
+			result = result.plus(each.getGrossAmount());	
+		}		
+		return result.toCleanString();
+	}
+
+	private ArrayList paymentsForQuarter() {
+		ArrayList result = new ArrayList();
+		String currentQuarter = currentQuarter();
+		for (Iterator iterator = payments.iterator(); iterator.hasNext();) {
+			Payment each = (Payment) iterator.next();
+			if (each.isForQuarter(currentQuarter)) {
+				result.add(each);
+			}
+			
+		}
+		
+		return result;
+	}
+
+	private String currentQuarter() {
+		Payment currentPayment = (Payment) payments.get(payments.size() - 1);
+		return currentPayment.getPayDate().substring(4,6);
+		
 	}
 
 	

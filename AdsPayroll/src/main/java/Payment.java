@@ -49,4 +49,14 @@ public class Payment {
 		return net.toCleanString();
 	}
 
+
+	public String getPayDate() {
+		return date;
+	}
+
+
+	public boolean isForQuarter(String currentQuarter) {
+		return true;
+	}
+
 }

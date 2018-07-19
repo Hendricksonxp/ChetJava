@@ -56,6 +56,6 @@ public class PaymentFixture {
 	}
 	
 	public String ytdGrossPay(){
-		return "0.00";
+		return currentEmployee.getQtdGrossPay();
 	}
 }
