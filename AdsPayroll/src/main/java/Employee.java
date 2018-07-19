@@ -73,7 +73,7 @@ public class Employee {
 
 	private String currentQuarter() {
 		Payment currentPayment = (Payment) payments.get(payments.size() - 1);
-		return currentPayment.getPayDate().substring(4,6);
+		return currentPayment.quarter();
 		
 	}
 

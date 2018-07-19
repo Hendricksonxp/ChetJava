@@ -55,8 +55,30 @@ public class Payment {
 	}
 
 
-	public boolean isForQuarter(String currentQuarter) {
-		return true;
+	public String quarter() {
+		String month = date.substring(4,6);
+		
+		if (month.equals("01"))return "1";
+		if (month.equals("02")) return "1";
+		if (month.equals("03")) return "1";
+		if (month.equals("04")) return "2";
+		if (month.equals("05")) return "2";
+		if (month.equals("06")) return "2";
+		if (month.equals("07")) return "3";
+		if (month.equals("08")) return "3";
+		if (month.equals("09")) return "3";
+		if (month.equals("10")) return "4";
+		if (month.equals("11")) return "4";
+		if (month.equals("12")) return "4";
+		
+		return "0";
 	}
 
+
+	public boolean isForQuarter(String currentQuarter) {		
+		return quarter().contentEquals(currentQuarter);
+	}
+
+
+	
 }
