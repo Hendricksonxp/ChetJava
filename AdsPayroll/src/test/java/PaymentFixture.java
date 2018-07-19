@@ -51,11 +51,11 @@ public class PaymentFixture {
 		return currentEmployee.getNetPay();
 	}
 	
-	public String qtdGrossPay(){
+	public String ytdGrossPay(){
 		return "0.00";
 	}
 	
-	public String ytdGrossPay(){
+	public String qtdGrossPay(){
 		return currentEmployee.getQtdGrossPay();
 	}
 }
